@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Online Event Management Software & Venue Software - Planning Pod</title>
+		<meta charset="utf-8" />
+		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+		<meta name="description" content="Planning Pod is the ultimate online hub for managing events. Our online event management software keeps you organized, streamlines processes & saves time.">
+
+		<!-- // ico -->
+		<link rel="apple-touch-icon" sizes="57x57" href="//www.planningpod.com/assets/img/ico/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="//www.planningpod.com/assets/img/ico/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="//www.planningpod.com/assets/img/ico/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="//www.planningpod.com/assets/img/ico/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="//www.planningpod.com/assets/img/ico/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="//www.planningpod.com/assets/img/ico/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="//www.planningpod.com/assets/img/ico/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="//www.planningpod.com/assets/img/ico/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="//www.planningpod.com/assets/img/ico/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="//www.planningpod.com/assets/img/ico/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="//www.planningpod.com/assets/img/ico/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="//www.planningpod.com/assets/img/ico/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="//www.planningpod.com/assets/img/ico/favicon-16x16.png">
+		<meta name="msapplication-TileColor" content="##ffffff">
+		<meta name="msapplication-TileImage" content="//www.planningpod.com/assets/img/ico/ms-icon-144x144.png">
+
+		<!--- // google site verification --->
+		<meta name="google-site-verification" content="XeP6Cu9XHpamD1LYW1eSIVvdHLmkUcdOOXp1mcpQdSE" />
+
+		<!-- // fonts and icons -->
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-LRlmVvLKVApDVGuspQFnRQJjkv0P7/YFrw84YYQtmYG4nK8c+M+NlmYDCv0rKWpG" crossorigin="anonymous">
+
+		<!-- // css -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="assets/css/now-ui-kit.css?v=1.2.2" rel="stylesheet" />
+		<link href="assets/css/utility.css?v=3" rel="stylesheet" />
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<link href="assets/css/formWizard.css" rel="stylesheet" />
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-expand-lg bg-white fixed-top navbar-transparent" color-on-scroll="100">
+			<div class="container-fluid">
+				<div class="navbar-translate">
+					<a class="navbar-brand" href="index.cfm">
+						<img id="pp-logo" src="./assets/img/logos/planning-pod-logo-reverse.png" alt="Planning Pod logo" style="max-width:125px;" >
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-bar bar1"></span>
+						<span class="navbar-toggler-bar bar2"></span>
+						<span class="navbar-toggler-bar bar3"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse">
+					<!--- <span class="navbar-text">
+						Sales Questions? 877-111-1111
+					</span> --->
+					<ul class="navbar-nav ml-auto">
+						<span class="d-none d-lg-block">
+							<li class="nav-item dropdown">
+								<a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">
+									<p>Products</p>
+								</a>
+								<div class="dropdown-menu">
+									<cfoutput>#productMenu()#</cfoutput>
+								</div>
+							</li>
+						</span>
+						<span class="d-lg-none">
+							<li class="nav-item">
+								<a class="nav-link" href="venue-management-software.cfm"><i class="fal fa-hotel fa-fw"></i>&nbsp;<b>Venue Management</b> Software</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="event-management-software.cfm"><i class="fal fa-clipboard-check fa-fw"></i>&nbsp;<b>Event Management</b> Software</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="event-floor-plan-software.cfm"><i class="fal fa-chair fa-fw"></i>&nbsp;<b>Event Floorplan</b> Design</a>
+							</li>
+						</span>
+						<li class="nav-item">
+							<a href="signup.cfm" class="nav-link btn btn-neutral btn-simple get-started-btn">
+								TRY IT FREE
+							</a>
+						</li>
+						<!--- // DISPLAY FOR LARGE SCREENS --->
+						<span class="d-none d-lg-block">
+							<li class="nav-item dropdown">
+								<a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">
+									<p>Contact</p>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<div class="ml-4 mr-4 mb-2 text-center">HAVE A SALES QUESTION?</div>
+									<div class="ml-4 mr-4 mb-0 text-center">
+										<i class="fal fa-phone fa-lg text-muted"></i><br />
+										<div class="mt-1"><b>877-266-3885</b></div>
+									</div>
+									<hr />
+									<div class="ml-4 mr-4 mb-0 text-center">
+										<i class="fal fa-at fa-lg text-muted"></i><br />
+										<a href="http://support.planningpod.com/hc/en-us/requests/new" target="_blank" class="dropdown-item"><b>Email Sales Representative <i class="fal fa-angle-right"></i></b></a>
+									</div>
+								</div>
+							</li>
+						</span>
+						<!--- // DISPLAY FOR SMALL SCREENS --->
+						<span class="d-lg-none">
+							<li class="nav-item">
+								<a class="nav-link" href="tel:877-266-3885">
+									<i class="fal fa-phone fa-fw"></i>&nbsp;Sales - 877-266-3885</i>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="http://support.planningpod.com/hc/en-us/requests/new">
+									<i class="fal fa-at fa-fw"></i>&nbsp;Email Sales Rep</i>
+								</a>
+							</li>
+						</span>
+						<li class="nav-item">
+							<a class="nav-link" href="testimonials.cfm">
+								<span class="d-lg-none">
+									<i class="fal fa-comments fa-fw"></i>&nbsp;Testimonials
+								</span>
+								<span class="d-none d-lg-block">
+									<p>Testimonials</p>
+								</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://blog.planningpod.com" target="_blank">
+								<span class="d-lg-none">
+									<i class="fal fa-rss fa-fw"></i>&nbsp;Blog
+								</span>
+								<span class="d-none d-lg-block">
+									<p>Blog</p>
+								</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="login.cfm">
+								<span class="d-lg-none">
+									<i class="fal fa-sign-in fa-fw"></i>&nbsp;Sign In
+								</span>
+								<span class="d-none d-lg-block">
+									<p>Sign In <i class="fal fa-sign-in"></i></p>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!--- // ---------------------------
+			Page Header Background
+		----------------------------------->
+		<div class="header-wrapper">
+			<div class="header-background" data-header-color="primary" data-header-size="small">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+
+			<!--- // ---------------------------
+				Page Header Content
+			----------------------------------->
+			<div class="header-content-mini">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8">
+							<h1 class="text-white">The Planning Pod Blog</h1>
+							<!--- <h3 class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit</h3> --->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+		<footer class="footer footer-big" style="margin-top:4em;">
+			<div class="container" style="border-top:double 5px #f2f2f2;padding-top:3em;">
+				<div class="content">
+					<div class="row">
+						<div class="col-md-6 col-lg-3 margin-bottom-3em">
+							<h5>Products</h5>
+							<ul class="links-vertical">
+								<li>
+									<a href="event-management-software.cfm" class="text-muted">
+										Event Management Software
+									</a>
+								</li>
+								<li>
+									<a href="venue-management-software.cfm" class="text-muted">
+										Venue Management Software
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-md-6 col-lg-3 margin-bottom-3em">
+							<h5>Event Planning</h5>
+							<ul class="links-vertical">
+								<li>
+									<a href="corporate-event-management-software.cfm" class="text-muted">
+										Corporate Events
+									</a>
+								</li>
+								<li>
+									<a href="event-planning-software.cfm" class="text-muted">
+										Event Planners &amp; Firms
+									</a>
+								</li>
+								<li>
+									<a href="online-meeting-management-software.cfm" class="text-muted">
+										Meetings &amp; Conferences
+									</a>
+								</li>
+								<li>
+									<a href="non-profit-event-software.cfm" class="text-muted">
+										Non-Profits &amp; Charities
+									</a>
+								</li>
+								<li>
+									<a href="education-event-management-software-universities.cfm" class="text-muted">
+										Schools &amp; Universities
+									</a>
+								</li>
+								<li>
+									<a href="wedding-event-planning-software.cfm" class="text-muted">
+										Wedding Planners
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-md-6 col-lg-3 margin-bottom-3em">
+							<h5>Venues</h5>
+							<ul class="links-vertical">
+								<li>
+									<a href="catering-software.cfm" class="text-muted">
+										Caterers
+									</a>
+								</li>
+								<li>
+									<a href="facility-management-software.cfm" class="text-muted">
+										Event &amp; Conference Centers
+									</a>
+								</li>
+								<li>
+									<a href="club-management-software-for-events.cfm" class="text-muted">
+										Golf &amp; Country Clubs
+									</a>
+								</li>
+								<li>
+									<a href="hotel-catering-and-event-management-software.cfm" class="text-muted">
+										Hotels and B &amp; B's
+									</a>
+								</li>
+								<li>
+									<a href="museum-gallery-management-software-for-events.cfm" class="text-muted">
+										Museums &amp; Galleries
+									</a>
+								</li>
+								<li>
+									<a href="restaurant-management-software-for-events.cfm" class="text-muted">
+										Restaurants &amp; Bars
+									</a>
+								</li>
+								<li>
+									<a href="banquet-wedding-hall-management-software.cfm" class="text-muted">
+										Wedding Venues &amp; Banquet Halls
+									</a>
+								</li>
+								<li>
+									<a href="brewery-and-winery-venue-management-software.cfm" class="text-muted">
+										Wineries &amp; Breweries
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-6 col-lg-3 margin-bottom-3em">
+							<h5>Key Features</h5>
+							<ul class="links-vertical">
+								<li>
+									<a href="event-budget-manager.cfm" class="text-muted">
+										Budgeting
+									</a>
+								</li>
+								<li>
+									<a href="contract-management.cfm" class="text-muted">
+										Contracts &amp; e-Signatures
+									</a>
+								</li>
+								<li>
+									<a href="proposal-management.cfm" class="text-muted">
+										Proposals
+									</a>
+								</li>
+								<li>
+									<a href="event-floor-plan-software.cfm" class="text-muted">
+										Floorplans
+									</a>
+								</li>
+								<li>
+									<a href="seating-arrangement-chart-software.cfm" class="text-muted">
+										Seating Charts
+									</a>
+								</li>
+								<li>
+									<a href="event-credit-card-payments.cfm" class="text-muted">
+										Invoicing &amp; Payments
+									</a>
+								</li>
+								<li>
+									<a href="event-email-communications.cfm" class="text-muted">
+										Email Communications
+									</a>
+								</li>
+								<li>
+									<a href="event-itinerary-builder.cfm" class="text-muted">
+										Schedules &amp; Itineraries
+									</a>
+								</li>
+								<li>
+									<a href="online-event-registration-software.cfm" class="text-muted">
+										Registration
+									</a>
+								</li>
+								<li>
+									<a href="event-ticketing-software.cfm" class="text-muted">
+										Ticketing
+									</a>
+								</li>
+								<li>
+									<a href="event-task-management.cfm" class="text-muted">
+										Checklists &amp; Task Management
+									</a>
+								</li>
+								<!--- <li>
+									<a href="" class="text-muted">
+										Feature List
+									</a>
+								</li> --->
+							</ul>
+						</div>
+					</div><!--- // end row --->
+
+					<div class="row">
+						<div class="col-md-6 col-lg-3 margin-bottom-3em">
+							<h5>Company</h5>
+							<ul class="links-vertical">
+								<li>
+									<a href="about.cfm" class="text-muted">
+										About
+									</a>
+								</li>
+								<li>
+									<a href="terms.cfm" class="text-muted">
+										Terms &amp; Conditions
+									</a>
+								</li>
+								<li>
+									<a href="privacy.cfm" class="text-muted">
+										Privacy Policy
+									</a>
+								</li>
+								<li>
+									<a href="faq.cfm" class="text-muted">
+										FAQ's
+									</a>
+								</li>
+								<li>
+									<a href="https://support.planningpod.com/hc/en-us/requests/new" class="text-muted" target="_blank">
+										Contact Us
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-md-6 col-lg-3 margin-bottom-3em">
+							<h5>Resources</h5>
+							<ul class="links-vertical">
+								<!--- <li>
+									<a href="" class="text-muted">
+										Integrations
+									</a>
+								</li> --->
+								<li>
+									<a href="https://support.planningpod.com" class="text-muted">
+										Help &amp; Support
+									</a>
+								</li>
+								<!--- <li>
+									<a href="" class="text-muted">
+										Checklists
+									</a>
+								</li> --->
+								<!--- <li>
+									<a href="" class="text-muted">
+										Guides &amp; Infographics
+									</a>
+								</li> --->
+								<li>
+									<a href="sitemap.cfm" class="text-muted">
+										Site Map
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-6">
+							<h5>Follow Us</h5>
+							<ul class="social-buttons">
+								<li>
+									<a href="https://www.facebook.com/PlanningPod" target="_blank" class="btn btn-icon btn-neutral btn-facebook btn-round">
+										<i class="fab fa-facebook"></i>
+									</a>
+								<li>
+									<a href="https://twitter.com/planpod" target="_blank" class="btn btn-icon btn-neutral btn-twitter btn-round">
+										<i class="fab fa-twitter"></i>
+									</a>
+								</li>
+								</li>
+								<li>
+									<a href="https://www.linkedin.com/company/2458271" target="_blank" class="btn btn-icon btn-neutral btn-dribbble btn-round">
+										<i class="fab fa-linkedin"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.youtube.com/channel/UClLA8mCZksH_FHAkUQ8tSjg" target="_blank" class="btn btn-icon btn-neutral btn-google btn-round">
+										<i class="fab fa-youtube"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.instagram.com/planningpod/" target="_blank" class="btn btn-icon btn-neutral btn-instagram btn-round">
+										<i class="fab fa-instagram"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.pinterest.com/planningpod/" target="_blank" class="btn btn-icon btn-neutral btn-instagram btn-round">
+										<i class="fab fa-pinterest"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<div class="copyright">
+					Copyright &copy; <cfoutput>#dateFormat(now(),'yyyy')#</cfoutput> Planning Pod All Rights Reserved.
+				</div>
+			</div>
+		</footer>
+
+		<!--- // core js --->
+		<script src="./assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+		<script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+		<script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+		<script src="./assets/js/now-ui-kit.js?v=1.2.0" type="text/javascript"></script>
+
+
+		<!--- GOOGLE ANALYTICS --->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-2932750-7', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+
+		<!-- Google Code for Remarketing Tag -->
+		<script type="text/javascript">
+		/* <![CDATA[ */
+		var google_conversion_id = 1048518312;
+		var google_custom_params = window.google_tag_params;
+		var google_remarketing_only = true;
+		/* ]]> */
+		</script>
+		<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+		</script>
+		<noscript>
+		<div style="display:inline;">
+		<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1048518312/?guid=ON&amp;script=0"/>
+		</div>
+		</noscript>
+
+		<!-- LinkedIn -->
+		<script type="text/javascript"> _linkedin_partner_id = "35014"; window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []; window._linkedin_data_partner_ids.push(_linkedin_partner_id); </script><script type="text/javascript"> (function(){var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);})(); </script> <noscript> <img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=35014&fmt=gif" /> </noscript>
+
+	</body>
+</html>
